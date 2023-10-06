@@ -14,15 +14,15 @@ for i in range(TC):    # TC = 9
     
 
 # #1차원 리스트 input 받기
-# numbers = input().split()
-# # print(numbers)
-# # print(type(numbers))
+numbers = input().split()
+# print(numbers)
+# print(type(numbers))
 
-# for number in numbers:
-#     int_num = int(number)    #글자 하나하나 int형으로 바꿔 int_num에 저장
+for number in numbers:
+    int_num = int(number)    #글자 하나하나 int형으로 바꿔 int_num에 저장
 
-#     if int_num % 2 == 1:
-#         print(f'{int_num}은 홀수 입니다')
+    if int_num % 2 == 1:
+        print(f'{int_num}은 홀수 입니다')
 
 
 numbers = list( map(  int,input().split() )  )  # 아직 글자
