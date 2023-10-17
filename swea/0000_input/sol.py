@@ -57,9 +57,9 @@ for row in matrix:
 
 
 # 행우선 반복 (index 접근)
-# for i in range(len(matrix)):
-#     for j in range(len(matrix[0])):
-#         print(i, j, matrix[i][j])
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        print(i, j, matrix[i][j])
 
 # 열우선 반복(index 접근)
 for i in range(len(matrix)):
