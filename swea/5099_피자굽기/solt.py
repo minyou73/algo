@@ -61,4 +61,5 @@ for tc in range(1, T+1):
                 pizza = queue.pop(0)
                 queue.append(pizza)
         #화덕입구에 공간이 없으면(이미 구워지고 있는 피자가 잇는 경우)
-        else:
+        
+        print(after[-1][1] + 1)

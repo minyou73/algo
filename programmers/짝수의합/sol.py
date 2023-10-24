@@ -4,7 +4,7 @@ def solution(n):
     for i in range(n+1):
         if i % 2 == 0:
             s += i
-        return s
+    return s
     
 print(solution(10))
 print(solution(4))
