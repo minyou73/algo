@@ -3,27 +3,27 @@
 # 나이 age가 매개변수로 주어질 때 PROGRAMMER-962식 나이를 return하도록 solution 함수를 완성해주세요.
 
 # for문으로 0~9까지 돌리면서 값을 입력.. 아닌가 index로 접근해야하나?
-# 아스키코드??
-
-# from string import ascii_lowercase
-# alphabet_list = list(ascii_lowercase)
-# print(alphabet_list)
-
-# # 소문자 출력
-# [chr(code) for code in range(97,123)]
- 
-# # 대문자 출력
-# [chr(code) for code in range(65,91)]
-
+# 아스키코드?? a=97
 
 
 def solution(age):
+    change = []
+    for i in str(age):    #age 숫자를 문자로 변환해서 하나씩 입력받고
+        change.append(chr(int(i)+97))   #아스키코드 로 만들어서
+    return ''.join(change)
+print(solution(23))
+print(solution(51))
+
+###################################################
+def solution(age):
     answer = ''
-
-    for i in range(0,9)
-
-
-
+    alpha = {'0':'a', '1':'b', '2':'c', '3':'d', '4':'e', '5':'f',
+            '6':'g', '7':'h', '8':'i', '9':'j'}
+    
+    for i in str(age):
+        answer+=(alpha[i])
     return answer
 
-print(solution(23))
+    #########################################
+    replace 함수 사용
+    translate 함수
