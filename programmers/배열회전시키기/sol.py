@@ -58,3 +58,20 @@ extendleft : 왼쪽에 리스트를 연장합니다.
 maxlen : 큐의 길이를 반환합니다.
 popleft : 큐의 맨 왼쪽에 있는 개체를 반환합니다.
 rotate : 큐를 회전합니다.
+
+#####################################################
+def solution(numbers, direction):
+    for num in numbers:
+        # 디렉션에 따라 숫자 pop해서 필요한 위치에 insert
+        if direction == 'right':
+            a = numbers[-1]
+            numbers.pop()
+            numbers.insert(0, a)
+
+        elif direction == 'left':
+            b = numbers[0]
+            numbers.pop(0)
+            numbers.insert(len(numbers), b)
+        return numbers
+
+        
