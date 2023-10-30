@@ -4,8 +4,18 @@
 
 
 def solution(my_string):
+    result = []
+    answer = 0
     for i in my_string:
+        if i not in result:      #result 리스트에 my_string값이 없다면 append
+                result.append(i)
 
-    
+    answer = ''.join(result)
+    return answer
 
 print(solution("people"))
+print(solution("We are the world"))
+
+##################################################
+    result = ''
+    result += i

@@ -26,3 +26,13 @@ def solution(n)
     while(pizza*6) % n != 0:
         pizza += 1
     return pizza
+
+
+######################################################
+# GCD함수(greatest common divisor) : 최대공약수를 찾는 함수, 유클리드알고리즘 관련 
+# 유클리드 호제법 관련 문서 : https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C_%ED%98%B8%EC%A0%9C%EB%B2%95
+
+import math
+
+def solution(n):
+    return (n * 6) // math.gcd(n, 6) // 6

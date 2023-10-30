@@ -26,3 +26,13 @@ def solution(order):
         if digit in ['3', '6', '9']:
             clap_count += 1
     return clap_count
+
+######################################################
+def solution(order):
+    answer = 0
+    order = str(order)
+    return order.count('3') + 
+order.count('6') + order.count('9')
+
+######################################################
+enumerate
