@@ -27,11 +27,31 @@ print(solution("onefourzerosixseven"))
 
 ############################################################################
 
+내 코드 효율적으로 줄인 경우(대충 머리가 나쁘면 돌아간다는 뜻)
+def solution(numbers):
+    r = {'zero': '0', 'one': '1', 'two': '2', 'three': '3', 'four': '4',\
+         'five': '5', 'six': '6', 'seven': '7', 'eight': '8', 'nine': '9'}
+    for k in r.keys():
+        numbers = numbers.replace(k, r[k])
+    return int(numbers)
+#######################################################################
+enumerate와 replace 사용한 함수
+def solution(numbers):
+    for num, eng in enumerate(["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]):
+        numbers = numbers.replace(eng, str(num))
+    return int(numbers)
 
-# def solution(numbers):
-    
-#     num = ["one", "two", "three", "four", "five",
-#                 "six", "seven", "eight", "nine", "zero" ]
+####################################################################
+def solution(numbers):
+    # 인덱스 만들기(단어가 의미하는 숫자 = 인덱스)
+    eng = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+
+    for char in eng:
+        if char in numbers:
+            # 반복문으로 eng 내부 숫자가 포함되는지 확인하고 변환
+           numbers = numbers.replace(char, str(eng.index(char)), numbers.count(char))
+        
+    return int(''.join(numbers))
 
 
         

@@ -36,3 +36,29 @@ print(solution([1, 2, 3, 4, 5, 6],5))
 # 1  2  3  1  (2)  3  1  2  3
 # /     /      /     
 # [0]  [2]    [4]    [6]
+
+
+
+#####################################################
+def solution(numbers, k):
+    return numbers[2 * (k - 1) % len(numbers)]
+
+#######################################################
+from collections import deque
+
+def solution(numbers, k):
+    n = len(numbers) 일곱번째로 공을 던진 사람
+    answer = [] # 3 1 3 1 3 1 3 1 3 1 3
+
+    # 일단 deque를 써서 원형 큐를 만들어줍니다....
+    circular_queue = deque(numbers)
+    for i in range(k):
+        # 두칸씩 미뤄줍시다... ( . . . 1 2 3 4 1 2 3 4 1 2 3 4 . . . )
+        circular_queue.rotate(-2)
+        answer.append(circular_queue[0]) # 3 1 3 1 3 1 3 1
+
+    return answer[k-2]
+
+print(solution([1, 2, 3, 4], 2)) #[3, 1]
+print(solution([1, 2, 3, 4, 5, 6], 5))  # [3, 5, 1, 3, 5]
+print(solution([1, 2, 3], 3))  # [3, 2, 1]

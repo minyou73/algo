@@ -4,7 +4,7 @@
 
 def solution(my_string):
     my_string = my_string.split()
-    answer = int(my_string[0])
+    answer = int(my_string[0])  # 3
     
     for i in range(len(my_string)):
      
@@ -18,3 +18,8 @@ def solution(my_string):
     return answer
 
 print(solution("3 + 4 - 2"))
+
+
+############################################
+def solution(my_string):
+    return sum(int(i) for i in my_string.replace(' - ', ' + -').split(' + '))
