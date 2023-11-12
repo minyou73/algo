@@ -40,3 +40,15 @@ def solution(n):
     answer = list(set(answer)) # 중복제거
     return sorted(answer)   #안했더니 통과 못하는 케이스 존재
 print(solution(10000))
+
+
+###############################################################
+def solution(n):
+    answer = []
+
+    for i in range(2, n+1):
+        while n % i == 0:
+            if i not in answer:
+                answer.append(i)
+            n //= i
+    return answer

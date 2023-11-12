@@ -15,3 +15,6 @@ def solution(array):
     return answer
 
 print(solution([7, 77, 17]))
+
+##############################################
+

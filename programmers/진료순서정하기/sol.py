@@ -25,3 +25,4 @@ def solution(emergency):
         dict1[x]=i
     answer=[dict1[x] for x in emergency]
     return answer
+    print(solution([3, 76, 24]))
