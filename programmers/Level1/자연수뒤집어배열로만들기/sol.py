@@ -12,6 +12,7 @@
 # print(solution(12345))
 
 # 통과 안됨..
+# 반례 14235
 
 
 def solution(n):
@@ -22,3 +23,11 @@ def solution(n):
 print(solution(12345))
 
 # 얘는 통과가 되네...? 무슨차이야..
+
+
+#######################################################
+def solution(n):
+    answer = []
+    for char in str(n):
+        answer.insert(0, int(char))
+    return answer
