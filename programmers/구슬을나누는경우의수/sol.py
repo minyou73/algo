@@ -33,17 +33,17 @@
 # # print(solution(3, 2))
 # print(solution(5, 3))
 
-#시간초과
+# 시간초과
 
 
 ################################################################
 
-# import math
+import math
 
-# def solution(balls, share):
-#     return math.comb(balls, share)
+def solution(balls, share):
+    return math.comb(balls, share)
 
-# print(solution(5, 3))
+print(solution(5, 3))
 
 # ############################################################
 

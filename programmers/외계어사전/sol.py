@@ -18,23 +18,23 @@ print(solution(["z", "d", "x"], ["def", "dww", "dzx", "loveaw"]))
 
 
 
-# def solution(spell, dic):
-#     count = 0
-#     diction = {d:0 for d in dic}  #{'def': 0, 'dww': 0, 'dzx': 0, 'loveaw': 0}
+def solution(spell, dic):
+    count = 0
+    diction = {d:0 for d in dic}  #{'def': 0, 'dww': 0, 'dzx': 0, 'loveaw': 0}
 
-#     for i in range(len(spell)):   # spell [z,d,x]
-#         for j in diction:         # diction에 있는 def, dww, dzx, loveaw 가져오기
-#             if spell[i] in j:     # spell [z,d,x]가 def에 있다면, dww에 있다면
-#                 diction[j] += 1   # diction의 value값 올려줌 하니씩
+    for i in range(len(spell)):   # spell [z,d,x]
+        for j in diction:         # diction에 있는 def, dww, dzx, loveaw 가져오기
+            if spell[i] in j:     # spell [z,d,x]가 def에 있다면, dww에 있다면
+                diction[j] += 1   # diction의 value값 올려줌 하니씩
     
-#     for k, v in diction.items():  # key, value 값 동시비교
-#         if v == len(spell):       # value 가 한번씩 다 사용했다면
-#             return 1
-#     else:
-#         return 2
+    for k, v in diction.items():  # key, value 값 동시비교
+        if v == len(spell):       # value 가 한번씩 다 사용했다면
+            return 1
+    else:
+        return 2
 
-# print(solution(["z", "d", "x"],["def", "dww", "dzx", "loveaw"]))
-# # print(solution(["s", "o", "m", "d"], ["moos", "dzx", "smm", "sunmmo", "som"]))
+print(solution(["z", "d", "x"],["def", "dww", "dzx", "loveaw"]))
+# print(solution(["s", "o", "m", "d"], ["moos", "dzx", "smm", "sunmmo", "som"]))
 
 
 ########################################################################
@@ -42,6 +42,7 @@ print(solution(["z", "d", "x"], ["def", "dww", "dzx", "loveaw"]))
 #....?? 
 # ....ㅎ
 # 어...이...가 .. 없네..?
+
 
 def solution(spell, dic):
     for d in dic:

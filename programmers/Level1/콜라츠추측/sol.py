@@ -27,3 +27,21 @@ def solution(num):
 print(solution(6))
 print(solution(16))
 print(solution(626331))
+
+
+########################################################
+def solution(num):
+    nums = []
+    while num != 1:
+        if num % 2 == 0:
+            num = num // 2
+            nums.append(num)
+        else:
+            num = num * 3 + 1
+            nums.append(num)
+
+    if len(nums) < 500:
+        answer = len(nums)
+    else:
+        answer = -1
+    return answer
