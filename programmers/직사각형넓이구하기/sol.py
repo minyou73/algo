@@ -19,3 +19,9 @@ def solution(dots):
     
 print(solution([[1, 1], [2, 1], [2, 2], [1, 2]]))
 print(solution([[-1, -1], [1, 1], [1, -1], [-1, 1]]))
+
+
+#####################################################################
+sorted 대신 max값으로 계산
+def solution(dots):
+    return (max(dots)[0] - min(dots)[0])*(max(dots)[1] - min(dots)[1])
