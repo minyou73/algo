@@ -4,10 +4,22 @@
 # n인분, 음료수 k개
 
 
-def solution(n, k):
-    if (n / 10) >= 1:
-        service = 2000
+# def solution(n, k):
+#     if (n / 10) >= 1:
+#         service = int(n /10) *2000
 
-    amount = (n * 12000)+ (2000 * k) + service
+#     amount = (n * 12000)+ (2000 * k) - service
+#     return amount
+# print(solution(10,3))
+
+# 런타임에러
+
+###############################################
+
+
+def solution(n, k):
+
+    amount = (n * 12000)+ (2000 * k) - (int(n/10)*2000)
     return amount
+    
 print(solution(10,3))
