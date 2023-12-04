@@ -11,6 +11,45 @@ def solution(id_pw, db):
 # my_dict = {item[0]: item[1] for item in my_list}
 # my_dict = dict(zip([item[0] for item in my_list], [item[1] for item in my_list]))
 
+    db_dict = dict(db)
+    if id_pw[0] in db_dict :
+        if id_pw[1] in db_dict.values():
+            return "login"
+        else:
+            return "wrong pw"
+    else:
+        return "fail"
+    
 
+print(solution( ["abc04", "345"], [["abc04", "335"], ["abc03", "345"]]))
+통과 못함..
+###############################################################################
 
-print(solution(["meosseugi", "1234"], [["rardss", "123"], ["yyoom", "1234"], ["meosseugi", "1234"]]))
+def solution(id_pw, db):
+    
+
+    db_dict = dict(db)
+    if id_pw[0] in db_dict :
+        if id_pw[1] in db_dict[id_pw[0]]:
+            return "login"
+        else:
+            return "wrong pw"
+    else:
+        return "fail"
+    
+
+print(solution( ["abc04", "345"], [["abc04", "335"], ["abc03", "345"]]))
+
+#################################################################################
+
+def solution(id_pw, db):
+    answer = ''
+    a, b = id_pw[0], id_pw[1]
+    for pk, pw in db:
+        if pk == a and pw == b:
+            return "login"
+    for pk, pw in db:
+        if pk == a:
+            return "wrong pw"
+
+    return "fail"
