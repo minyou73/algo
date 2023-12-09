@@ -6,13 +6,30 @@
 # 4	5 |	9	14
 # 5	7 |	10	16
 
+
 def solution(n):
+    a = []
+    for i in range(1, 250):
+        if i % 3 != 0 and '3' not in str(i):
+            a.append(i)
 
-    a = [i for i in 101]
+    answer = {}
+    # answer = {key+1: value for key, value in enumerate(a)}
 
-    for j in a :
-        if j % 3 == 0:
+    for key, value in enumerate(a):
+        answer[key+1] = value 
 
-        
-
+    return answer[n]
+    
 print(solution(15))
+
+
+########################################################################
+
+def solution(n):
+    answer = 0
+    for _ in range(n):
+        answer += 1
+        while answer % 3 == 0 or '3' in str(answer):
+            answer += 1
+    return answer
