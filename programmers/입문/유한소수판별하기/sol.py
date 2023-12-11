@@ -39,27 +39,45 @@
 def solution(a,b):
     a_li=[]
     b_li=[]
-    for i in range(1,a+1):
+    for i in range(1,a+1):   # a의 약수
         if a % i == 0:
             a_li.append(i)
 
-    for i in range(1,b+1):
+    for i in range(1,b+1):   # b의 약수
         if b % i == 0:
             b_li.append(i)
     
-    div = []
+    div = []                # 최대공약수
     for k in a_li:
         for j in b_li:
             if k == j:
                 div.append(k)
     
 
-    a = a / max(div)
-    b = b / max(div)
+    a //=  max(div)        #최대공약수로 나눠줌 분모
+    b //=  max(div)        #최대공약수로 나눠줌 분자
    
-    answer = []
+    answer = []  # 분모 소인수분해
     while b > 1:
-        b //2
+        if b % 2 == 0:  # 짝수면
+            answer.append(2)
+            b //= 2
+        else:
+            for z in range(3, b+1, 2):  # 홀수면
+                if b % z == 0:
+                    answer.append(z)
+                    b //= z
+                    break
 
+    if all(i in [2,5] for i in answer): #answer 리스트의 각 원소 i에 대해 i in [2, 5]를 검사
+        return 1                        #all() 함수는 이 리스트의 모든 값이 참(True)인지 확인
+    return 2
+
+# print(solution(1, 12))
 print(solution(7,20))
-print(solution(11,22))
+# print(solution(11,22))
+
+#############################################################3
+
+from math import gcd
+
