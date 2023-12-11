@@ -25,11 +25,20 @@ print(solution(15))
 
 
 ########################################################################
-
 def solution(n):
     answer = 0
-    for _ in range(n):
+    count = 0
+    while count < n:
         answer += 1
-        while answer % 3 == 0 or '3' in str(answer):
-            answer += 1
+        if '3' in str(answer) or answer % 3 == 0:
+            continue
+        count += 1
     return answer
+
+#####################################################################
+def solution(n):
+    x = [i for i in range(1, 200) if i % 3 != 0]
+    y = [i for i in range(1, 200) if '3' not in str(i)]
+
+    answer = list(set(x) & set(y))
+    return answer[n-1]
